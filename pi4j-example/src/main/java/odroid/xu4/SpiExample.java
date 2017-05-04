@@ -50,10 +50,10 @@ import java.io.IOException;
 public class SpiExample {
 
     // SPI device
-    public static SpiDevice spi = null;
+    public static final SpiDevice spi = null;
 
     // ADC channel count
-    public static short ADC_CHANNEL_COUNT = 8;  // MCP3004=4, MCP3008=8
+    public static final short ADC_CHANNEL_COUNT = 8;  // MCP3004=4, MCP3008=8
 
     // create Pi4J console wrapper/helper
     // (This is a utility class to abstract some of the boilerplate code)

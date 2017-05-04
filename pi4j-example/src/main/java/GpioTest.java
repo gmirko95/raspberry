@@ -44,7 +44,7 @@ import java.util.Scanner;
  */
 public class GpioTest {
 
-    private static boolean exit = false;
+    private static final boolean exit = false;
 
     public static void main(String[] args) throws InterruptedException, PlatformAlreadyAssignedException, IOException {
 

@@ -54,7 +54,7 @@ public class MCP4725Pin {
 
     public static final Pin OUTPUT = createAnalogOutputPin(0, "ANALOG OUTPUT");
 
-    public static Pin[] ALL = { MCP4725Pin.OUTPUT };
+    public static final Pin[] ALL = { MCP4725Pin.OUTPUT };
 
     private static Pin createAnalogOutputPin(int address, String name) {
         return new PinImpl(MCP4725GpioProvider.NAME, address, name, EnumSet.of(PinMode.ANALOG_OUTPUT));

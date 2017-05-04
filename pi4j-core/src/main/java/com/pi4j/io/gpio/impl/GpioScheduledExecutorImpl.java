@@ -44,7 +44,7 @@ import java.util.concurrent.*;
 public class GpioScheduledExecutorImpl {
 
     private static final ConcurrentHashMap<GpioPinDigitalOutput, ArrayList<ScheduledFuture<?>>> pinTaskQueue = new ConcurrentHashMap<>();
-    private static ScheduledExecutorService scheduledExecutorService;
+    private static final ScheduledExecutorService scheduledExecutorService;
 
     private synchronized static void init(GpioPinDigitalOutput pin) {
         if (scheduledExecutorService == null) {

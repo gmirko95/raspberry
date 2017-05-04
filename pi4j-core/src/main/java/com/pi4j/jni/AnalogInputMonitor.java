@@ -48,7 +48,7 @@ import java.util.Vector;
  */
 public class AnalogInputMonitor {
 
-    private static Vector<AnalogInputListener> listeners = new Vector<>();
+    private static final Vector<AnalogInputListener> listeners = new Vector<>();
     private Object lock;
 
     // private constructor

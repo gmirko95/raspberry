@@ -100,8 +100,8 @@ public class RPIServoBlasterProvider implements ServoProvider {
     public static final String PIN_P5_5 = "P5-5";
     public static final String PIN_P5_6 = "P5-6";
 
-    public static Map<Pin, String> PIN_MAP;
-    public static Map<String, Pin> REVERSE_PIN_MAP;
+    public static final Map<Pin, String> PIN_MAP;
+    public static final Map<String, Pin> REVERSE_PIN_MAP;
 
     static {
         PIN_MAP = new HashMap<>();

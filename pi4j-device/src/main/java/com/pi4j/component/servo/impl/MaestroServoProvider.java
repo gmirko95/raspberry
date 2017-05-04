@@ -75,8 +75,8 @@ public class MaestroServoProvider implements ServoProvider {
     public static final int DEFAULT_DEVICE_ADDRESS = 12;
     public static final int DEFAULT_BAUDRATE = 9600;
 
-    public static Map<Pin, String> PIN_MAP;
-    public static Map<String, Pin> REVERSE_PIN_MAP;
+    public static final Map<Pin, String> PIN_MAP;
+    public static final <String, Pin> REVERSE_PIN_MAP;
 
     protected InterfaceType interfaceType;
     protected Serial device;

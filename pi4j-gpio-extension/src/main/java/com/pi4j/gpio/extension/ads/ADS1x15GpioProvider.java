@@ -87,10 +87,10 @@ public abstract class ADS1x15GpioProvider extends GpioProviderBase implements Gp
     protected short bitShift = 0;
 
     // minimum allowed background monitoring interval in milliseconds
-    public static int MIN_MONITOR_INTERVAL = 1;
+    public static int final MIN_MONITOR_INTERVAL = 1;
 
     // default background monitoring interval in milliseconds
-    public static int DEFAULT_MONITOR_INTERVAL = 100;
+    public static int final DEFAULT_MONITOR_INTERVAL = 100;
 
     // =======================================================================
     // POINTER REGISTER

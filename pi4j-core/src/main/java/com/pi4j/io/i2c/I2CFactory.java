@@ -53,7 +53,7 @@ public class I2CFactory {
         }
     }
 
-    volatile static I2CFactoryProvider provider = new I2CFactoryProviderRaspberryPi();
+    volatile static final I2CFactoryProvider provider = new I2CFactoryProviderRaspberryPi();
 
     // private constructor
     private I2CFactory() {

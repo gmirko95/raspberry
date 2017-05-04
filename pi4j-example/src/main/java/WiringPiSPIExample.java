@@ -32,8 +32,8 @@ import com.pi4j.wiringpi.Spi;
 public class WiringPiSPIExample {
 
     // SPI operations
-    public static byte WRITE_CMD = 0x40;
-    public static byte READ_CMD  = 0x41;
+    public static final byte WRITE_CMD = 0x40;
+    public static final byte READ_CMD  = 0x41;
 
     @SuppressWarnings("unused")
     public static void main(String args[]) throws InterruptedException {

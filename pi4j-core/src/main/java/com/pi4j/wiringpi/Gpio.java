@@ -685,7 +685,7 @@ public class Gpio {
     }
 
     // internal collection for use subscribed IRS callbacks
-    private static List<GpioInterruptCallback> isrCallbacks[] = new List[NUM_PINS];
+    private static final List<GpioInterruptCallback> isrCallbacks[] = new List[NUM_PINS];
 
     // delegated native method for 'wiringPiISR'
     private static native int _wiringPiISR(int pin, int edgeType);

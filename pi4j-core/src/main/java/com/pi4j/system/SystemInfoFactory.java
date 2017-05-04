@@ -64,7 +64,7 @@ import com.pi4j.platform.PlatformManager;
 public class SystemInfoFactory {
 
     // we only allow a single default provider to exists
-    private static SystemInfoProvider provider = null;
+    private static final SystemInfoProvider provider = null;
 
     // private constructor
     private SystemInfoFactory() {

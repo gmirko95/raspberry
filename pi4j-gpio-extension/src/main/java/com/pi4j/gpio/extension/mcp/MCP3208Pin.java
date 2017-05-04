@@ -60,7 +60,7 @@ public class MCP3208Pin {
 	public static final Pin CH6 = createAnalogInputPin(6, "ANALOG INPUT 6");
 	public static final Pin CH7 = createAnalogInputPin(7, "ANALOG INPUT 7");
 
-	public static Pin[] ALL = { MCP3208Pin.CH0, MCP3208Pin.CH1, MCP3208Pin.CH2, MCP3208Pin.CH3, MCP3208Pin.CH4,
+	public static final Pin[] ALL = { MCP3208Pin.CH0, MCP3208Pin.CH1, MCP3208Pin.CH2, MCP3208Pin.CH3, MCP3208Pin.CH4,
 			MCP3208Pin.CH5, MCP3208Pin.CH6, MCP3208Pin.CH7 };
 
 	private static Pin createAnalogInputPin(final int channel, final String name) {

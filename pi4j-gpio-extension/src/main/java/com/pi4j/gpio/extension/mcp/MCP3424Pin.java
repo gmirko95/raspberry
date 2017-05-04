@@ -56,7 +56,7 @@ public class MCP3424Pin {
     public static final Pin GPIO_CH2 = createAnalogInputPin(2, "ANALOG INPUT 2");
     public static final Pin GPIO_CH3 = createAnalogInputPin(3, "ANALOG INPUT 3");
 
-    public static Pin[] ALL_PINS = { MCP3424Pin.GPIO_CH0,
+    public static final Pin[] ALL_PINS = { MCP3424Pin.GPIO_CH0,
                                      MCP3424Pin.GPIO_CH1,
                                      MCP3424Pin.GPIO_CH2,
                                      MCP3424Pin.GPIO_CH3 };

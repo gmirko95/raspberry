@@ -53,7 +53,7 @@ import java.util.Map;
  */
 public abstract class DefaultSystemInfoProvider extends SystemInfoProviderBase implements SystemInfoProvider {
 
-    private static Map<String, String> cpuInfo;
+    private static final Map<String, String> cpuInfo;
 
     /**
      * This method will read and parse the '/proc/cpuinfo' into a collection of properties.

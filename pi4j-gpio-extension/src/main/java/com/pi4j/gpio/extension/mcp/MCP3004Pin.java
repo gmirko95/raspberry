@@ -57,7 +57,7 @@ public class MCP3004Pin {
 	public static final Pin CH2 = createAnalogInputPin(2, "ANALOG INPUT 2");
 	public static final Pin CH3 = createAnalogInputPin(3, "ANALOG INPUT 3");
 
-	public static Pin[] ALL = { MCP3004Pin.CH0, MCP3004Pin.CH1, MCP3004Pin.CH2, MCP3004Pin.CH3 };
+	public static final Pin[] ALL = { MCP3004Pin.CH0, MCP3004Pin.CH1, MCP3004Pin.CH2, MCP3004Pin.CH3 };
 
 	private static Pin createAnalogInputPin(final int channel, final String name) {
 		return new PinImpl(MCP3004GpioProvider.NAME, channel, name, EnumSet.of(PinMode.ANALOG_INPUT));

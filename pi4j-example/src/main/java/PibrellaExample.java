@@ -41,10 +41,10 @@ public class PibrellaExample {
     static final Pibrella pibrella = new PibrellaDevice();
 
     // stores the pulse rate for the LEDs
-    static int pulseRate = 100;
+    static final int pulseRate = 100;
 
     // create a tune playing thread
-    static SampleTuneThread sampleTuneThread = new SampleTuneThread();
+    static final SampleTuneThread sampleTuneThread = new SampleTuneThread();
 
     /**
      * Start Pibrella Example

@@ -61,7 +61,7 @@ public class ADS1015Pin {
     public static final Pin INPUT_A2 = createAnalogInputPin(2, "ANALOG INPUT 2");
     public static final Pin INPUT_A3 = createAnalogInputPin(3, "ANALOG INPUT 3");
 
-    public static Pin[] ALL = { ADS1015Pin.INPUT_A0, ADS1015Pin.INPUT_A1, ADS1015Pin.INPUT_A2, ADS1015Pin.INPUT_A3 };
+    public static final Pin[] ALL = { ADS1015Pin.INPUT_A0, ADS1015Pin.INPUT_A1, ADS1015Pin.INPUT_A2, ADS1015Pin.INPUT_A3 };
 
     private static Pin createAnalogInputPin(int address, String name) {
         return new PinImpl(ADS1015GpioProvider.NAME, address, name, EnumSet.of(PinMode.ANALOG_INPUT));

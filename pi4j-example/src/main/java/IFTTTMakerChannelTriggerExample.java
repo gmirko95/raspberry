@@ -44,11 +44,11 @@ public class IFTTTMakerChannelTriggerExample {
 
     // TODO: ADD YOU IFTTT MAKER CHANNEL API KEY HERE!
     // (You can get this API KEY when you add the Maker Channel to your IFTTT account.)
-    public static String IFTTT_MAKER_CHANNEL_API_KEY = "lyekJ_ZnpzXIMYpZiPaeXzMzpqGqX0KKLGWCwJYevgx";
+    public static final String IFTTT_MAKER_CHANNEL_API_KEY = "lyekJ_ZnpzXIMYpZiPaeXzMzpqGqX0KKLGWCwJYevgx";
 
     // TODO: ADD YOU IFTTT MAKER CHANNEL TRIGGER EVENT NAME HERE!
     // (You define the event name when you create an IFTTT recipe with Maker Channel as the recipe trigger)
-    public static String IFTTT_MAKER_CHANNEL_EVENT_NAME = "pi4j";
+    public static final String IFTTT_MAKER_CHANNEL_EVENT_NAME = "pi4j";
 
     /**
      * @param args --none-

@@ -35,7 +35,7 @@ import com.pi4j.wiringpi.Gpio;
 
 public class PibrellaBuzzerImpl implements Buzzer {
 
-    public static int STOP_FREQUENCY = 0;
+    public static final int STOP_FREQUENCY = 0;
 
     protected final GpioPinPwmOutput pwm;
 

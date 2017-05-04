@@ -68,6 +68,6 @@ public class OlimexAVRIOPin {
 
     public static final Pin IN_04 = new PinImpl(OlimexAVRIOGpioProvider.NAME, 8, "INPUT 4", EnumSet.of(PinMode.DIGITAL_INPUT));
 
-    public static Pin[] INPUTS = { OlimexAVRIOPin.IN_01, OlimexAVRIOPin.IN_02, OlimexAVRIOPin.IN_03, OlimexAVRIOPin.IN_04 };
-    public static Pin[] RELAYS = { OlimexAVRIOPin.RELAY_01, OlimexAVRIOPin.RELAY_02, OlimexAVRIOPin.RELAY_03, OlimexAVRIOPin.RELAY_04 };
+    public static final Pin[] INPUTS = { OlimexAVRIOPin.IN_01, OlimexAVRIOPin.IN_02, OlimexAVRIOPin.IN_03, OlimexAVRIOPin.IN_04 };
+    public static final Pin[] RELAYS = { OlimexAVRIOPin.RELAY_01, OlimexAVRIOPin.RELAY_02, OlimexAVRIOPin.RELAY_03, OlimexAVRIOPin.RELAY_04 };
 }

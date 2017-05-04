@@ -59,7 +59,7 @@ public class MCP3008Pin {
     public static final Pin CH6 = createAnalogInputPin(6, "ANALOG INPUT 6");
     public static final Pin CH7 = createAnalogInputPin(7, "ANALOG INPUT 7");
 
-    public static Pin[] ALL = { MCP3008Pin.CH0,
+    public static final Pin[] ALL = { MCP3008Pin.CH0,
                                 MCP3008Pin.CH1,
                                 MCP3008Pin.CH2,
                                 MCP3008Pin.CH3,

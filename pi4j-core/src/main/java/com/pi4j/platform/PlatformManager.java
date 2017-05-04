@@ -42,7 +42,7 @@ package com.pi4j.platform;
 public class PlatformManager {
 
     // selected platform
-    private static Platform platform = null;
+    private static final Platform platform = null;
 
     /**
      * Get the selected system platform.  If

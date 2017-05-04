@@ -52,7 +52,7 @@ import java.io.IOException;
  */
 public class PiFaceExample {
 
-    static int cylonSpeed = 100;
+    static int final cylonSpeed = 100;
 
     public static void main(String args[]) throws InterruptedException, IOException {
 
