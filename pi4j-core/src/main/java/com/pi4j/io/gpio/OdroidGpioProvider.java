@@ -58,8 +58,8 @@ public class OdroidGpioProvider extends WiringPiGpioProviderBase implements Gpio
     public static final int DEFAULT_ANALOG_INPUT_POLLING_RATE = 50; // milliseconds
     public static final double DEFAULT_ANALOG_INPUT_LISTENER_CHANGE_THRESHOLD = 0.0f;
 
-    protected static int analogInputPollingRate = DEFAULT_ANALOG_INPUT_POLLING_RATE;
-    protected static double analogInputListenerChangeThreshold = DEFAULT_ANALOG_INPUT_LISTENER_CHANGE_THRESHOLD;
+    protected static final  int analogInputPollingRate = DEFAULT_ANALOG_INPUT_POLLING_RATE;
+    protected static final double analogInputListenerChangeThreshold = DEFAULT_ANALOG_INPUT_LISTENER_CHANGE_THRESHOLD;
 
     /**
      * Get the analog input monitor polling rate in milliseconds.

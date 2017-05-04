@@ -61,8 +61,8 @@ import com.pi4j.util.NativeLibraryLoader;
  */
 public class I2C {
 
-    public static int CHANNEL_0 = 0;
-    public static int CHANNEL_1 = 1;
+    public static final int CHANNEL_0 = 0;
+    public static final int CHANNEL_1 = 1;
 
     // private constructor
     private I2C()  {

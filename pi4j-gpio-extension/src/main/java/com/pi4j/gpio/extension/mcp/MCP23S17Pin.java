@@ -69,13 +69,13 @@ public class MCP23S17Pin extends MCP23X17Pin {
     public static final Pin GPIO_B6 = createDigitalPin(1064, "GPIO B6");
     public static final Pin GPIO_B7 = createDigitalPin(1128, "GPIO B7");
 
-    public static Pin[] ALL_A_PINS = { MCP23S17Pin.GPIO_A0, MCP23S17Pin.GPIO_A1, MCP23S17Pin.GPIO_A2, MCP23S17Pin.GPIO_A3,
+    public static final Pin[] ALL_A_PINS = { MCP23S17Pin.GPIO_A0, MCP23S17Pin.GPIO_A1, MCP23S17Pin.GPIO_A2, MCP23S17Pin.GPIO_A3,
                                        MCP23S17Pin.GPIO_A4, MCP23S17Pin.GPIO_A5, MCP23S17Pin.GPIO_A6, MCP23S17Pin.GPIO_A7 };
 
-    public static Pin[] ALL_B_PINS = { MCP23S17Pin.GPIO_B0, MCP23S17Pin.GPIO_B1, MCP23S17Pin.GPIO_B2, MCP23S17Pin.GPIO_B3,
+    public static final Pin[] ALL_B_PINS = { MCP23S17Pin.GPIO_B0, MCP23S17Pin.GPIO_B1, MCP23S17Pin.GPIO_B2, MCP23S17Pin.GPIO_B3,
                                        MCP23S17Pin.GPIO_B4, MCP23S17Pin.GPIO_B5, MCP23S17Pin.GPIO_B6, MCP23S17Pin.GPIO_B7 };
 
-    public static Pin[] ALL = { MCP23S17Pin.GPIO_A0, MCP23S17Pin.GPIO_A1, MCP23S17Pin.GPIO_A2, MCP23S17Pin.GPIO_A3,
+    public static final Pin[] ALL = { MCP23S17Pin.GPIO_A0, MCP23S17Pin.GPIO_A1, MCP23S17Pin.GPIO_A2, MCP23S17Pin.GPIO_A3,
                                 MCP23S17Pin.GPIO_A4, MCP23S17Pin.GPIO_A5, MCP23S17Pin.GPIO_A6, MCP23S17Pin.GPIO_A7,
                                 MCP23S17Pin.GPIO_B0, MCP23S17Pin.GPIO_B1, MCP23S17Pin.GPIO_B2, MCP23S17Pin.GPIO_B3,
                                 MCP23S17Pin.GPIO_B4, MCP23S17Pin.GPIO_B5, MCP23S17Pin.GPIO_B6, MCP23S17Pin.GPIO_B7 };

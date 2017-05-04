@@ -49,12 +49,12 @@ public abstract class WiringPiGpioProviderBase extends GpioProviderBase implemen
 
     // the pin cache should support the maximum number of pins supported by wiringPi plus some
     // additional overhead for virtual analog input pins used by providers like Odroid C1/C1+/C2/XU4
-    protected static short MAX_PIN_CACHE = Gpio.NUM_PINS + 5;
+    protected static final short MAX_PIN_CACHE = Gpio.NUM_PINS + 5;
 
     // need enough space in array for maximum number of pins.
     // Currently the Computer module supports the highest number of pins.
-    protected static short pinSupportedCache[] = new short[MAX_PIN_CACHE];
-    protected static PinMode pinModeCache[] = new PinMode[MAX_PIN_CACHE];
+    protected static final short pinSupportedCache[] = new short[MAX_PIN_CACHE];
+    protected static final PinMode pinModeCache[] = new PinMode[MAX_PIN_CACHE];
 
     public abstract String getName();
 

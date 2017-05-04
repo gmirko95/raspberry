@@ -53,42 +53,42 @@ public class Serial {
     public static final String FIRST_USB_COM_PORT = "/dev/ttyUSB0";
     public static final String SECOND_USB_COM_PORT = "/dev/ttyUSB1";
 
-    public static int BAUD_RATE_50     = 50;
-    public static int BAUD_RATE_75     = 75;
-    public static int BAUD_RATE_110    = 110;
-    public static int BAUD_RATE_134    = 134;
-    public static int BAUD_RATE_150    = 150;
-    public static int BAUD_RATE_200    = 200;
-    public static int BAUD_RATE_300    = 300;
-    public static int BAUD_RATE_600    = 600;
-    public static int BAUD_RATE_1200   = 1200;
-    public static int BAUD_RATE_1800   = 1800;
-    public static int BAUD_RATE_2400   = 2400;
-    public static int BAUD_RATE_4800   = 4800;
-    public static int BAUD_RATE_9600   = 9600;
-    public static int BAUD_RATE_19200  = 19200;
-    public static int BAUD_RATE_38400  = 38400;
-    public static int BAUD_RATE_57600  = 57600;
-    public static int BAUD_RATE_115200 = 115200;
-    public static int BAUD_RATE_230400 = 230400;
+    public static final int BAUD_RATE_50     = 50;
+    public static final int BAUD_RATE_75     = 75;
+    public static final int BAUD_RATE_110    = 110;
+    public static final int BAUD_RATE_134    = 134;
+    public static final int BAUD_RATE_150    = 150;
+    public static final int BAUD_RATE_200    = 200;
+    public static final int BAUD_RATE_300    = 300;
+    public static final int BAUD_RATE_600    = 600;
+    public static final int BAUD_RATE_1200   = 1200;
+    public static final int BAUD_RATE_1800   = 1800;
+    public static final int BAUD_RATE_2400   = 2400;
+    public static final int BAUD_RATE_4800   = 4800;
+    public static final int BAUD_RATE_9600   = 9600;
+    public static final int BAUD_RATE_19200  = 19200;
+    public static final int BAUD_RATE_38400  = 38400;
+    public static final int BAUD_RATE_57600  = 57600;
+    public static final int BAUD_RATE_115200 = 115200;
+    public static final int BAUD_RATE_230400 = 230400;
 
-    public static int PARITY_NONE  = 0;
-    public static int PARITY_ODD   = 1;
-    public static int PARITY_EVEN  = 2;
-    public static int PARITY_MARK  = 3;   // NOT ALL UNIX SYSTEM SUPPORT 'MARK' PARITY; THIS IS EXPERIMENTAL
-    public static int PARITY_SPACE = 4;   // NOT ALL UNIX SYSTEM SUPPORT 'SPACE' PARITY; THIS IS EXPERIMENTAL
+    public static final int PARITY_NONE  = 0;
+    public static final int PARITY_ODD   = 1;
+    public static final int PARITY_EVEN  = 2;
+    public static final int PARITY_MARK  = 3;   // NOT ALL UNIX SYSTEM SUPPORT 'MARK' PARITY; THIS IS EXPERIMENTAL
+    public static final int PARITY_SPACE = 4;   // NOT ALL UNIX SYSTEM SUPPORT 'SPACE' PARITY; THIS IS EXPERIMENTAL
 
-    public static int DATA_BITS_5 = 5;
-    public static int DATA_BITS_6 = 6;
-    public static int DATA_BITS_7 = 7;
-    public static int DATA_BITS_8 = 8;
+    public static final int DATA_BITS_5 = 5;
+    public static final int DATA_BITS_6 = 6;
+    public static final int DATA_BITS_7 = 7;
+    public static final int DATA_BITS_8 = 8;
 
-    public static int STOP_BITS_1 = 1;
-    public static int STOP_BITS_2 = 2;
+    public static final int STOP_BITS_1 = 1;
+    public static final int STOP_BITS_2 = 2;
 
-    public static int FLOW_CONTROL_NONE     = 0;
-    public static int FLOW_CONTROL_HARDWARE = 1;
-    public static int FLOW_CONTROL_SOFTWARE = 2;
+    public static final int FLOW_CONTROL_NONE     = 0;
+    public static final int FLOW_CONTROL_HARDWARE = 1;
+    public static final int FLOW_CONTROL_SOFTWARE = 2;
 
 
     // private constructor

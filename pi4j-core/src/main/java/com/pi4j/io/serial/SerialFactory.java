@@ -59,10 +59,10 @@ import com.pi4j.io.serial.impl.SerialImpl;
  */
 public class SerialFactory {
 
-    private static boolean isshutdown = false;
+    private static final boolean isshutdown = false;
 
     // we only allow a single default scheduled executor service factory to exists
-    private static ExecutorServiceFactory executorServiceFactory = null;
+    private static final ExecutorServiceFactory executorServiceFactory = null;
 
     // private constructor
     private SerialFactory() {

@@ -44,8 +44,8 @@ import java.nio.BufferOverflowException;
  */
 public class SerialByteBuffer {
 
-    public static int DEFAULT_BUFFER_SCALE_FACTOR = 2;
-    public static int DEFAULT_INITIAL_BUFFER_SIZE = 4096;
+    public static final int DEFAULT_BUFFER_SCALE_FACTOR = 2;
+    public static final int DEFAULT_INITIAL_BUFFER_SIZE = 4096;
 
     private InputStream stream = new SerialByteBufferInputStream();
     private volatile int writeIndex = 0;

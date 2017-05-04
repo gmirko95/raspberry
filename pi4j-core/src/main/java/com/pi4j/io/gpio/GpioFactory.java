@@ -63,13 +63,13 @@ import com.pi4j.platform.PlatformManager;
 public class GpioFactory {
 
     // we only allow a single controller to exists
-    private static GpioController controller = null;
+    private static final GpioController controller = null;
 
     // we only allow a single default provider to exists
-    private static GpioProvider provider = null;
+    private static final GpioProvider provider = null;
 
     // we only allow a single default scheduled executor service factory to exists
-    private static ExecutorServiceFactory executorServiceFactory = null;
+    private static final ExecutorServiceFactory executorServiceFactory = null;
 
     // private constructor
     private GpioFactory() {

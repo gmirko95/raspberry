@@ -40,8 +40,8 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class DefaultExecutorServiceFactory implements ExecutorServiceFactory {
 
-    private static int MAX_THREADS_IN_POOL = 25;
-    private static List<ExecutorService> singleThreadExecutorServices = new ArrayList<>();
+    private static final int MAX_THREADS_IN_POOL = 25;
+    private static final List<ExecutorService> singleThreadExecutorServices = new ArrayList<>();
 
     // this seemingly odd pattern is the recommended way to lazy-initialize static fields in effective java.
     // The static "holder" class doesn't have it's static initializer called until it is accessed - and it's not accessed until the

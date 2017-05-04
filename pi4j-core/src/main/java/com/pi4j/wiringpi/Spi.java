@@ -62,13 +62,13 @@ import com.pi4j.util.NativeLibraryLoader;
  */
 public class Spi {
 
-    public static int CHANNEL_0 = 0;
-    public static int CHANNEL_1 = 1;
+    public static final int CHANNEL_0 = 0;
+    public static final int CHANNEL_1 = 1;
 
-    public static int MODE_0 = 0;
-    public static int MODE_1 = 1;
-    public static int MODE_2 = 2;
-    public static int MODE_3 = 3;
+    public static final int MODE_0 = 0;
+    public static final int MODE_1 = 1;
+    public static final int MODE_2 = 2;
+    public static final int MODE_3 = 3;
 
     // private constructor
     private Spi()  {
