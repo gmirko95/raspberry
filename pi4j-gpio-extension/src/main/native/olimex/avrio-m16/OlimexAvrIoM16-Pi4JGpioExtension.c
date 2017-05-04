@@ -77,12 +77,37 @@
 
 #define	__AVR_ATmega16__	1
 #define OSCSPEED	16000000		/* in Hz */
+#define TXTMAX 80
+#define LKIS 255
+#define SIXT 16
+#define THRT 13
 
-char Txt[80];
+#define BIT16 16
+#define BIT32 32
+#define BIT64 64
+#define BIT128 128
+
+#define DIX 10
+#define FOUREI 48
+#define FIFSE 57
+#define SIXFIV 65
+#define SEVEN 70
+#define FIFEI 58
+#define FIFIF 55
+#define FONI 49
+#define BIG 19200
+
+
+
+
+
+
+
+char Txt[TXTMAX];
 
 const char FORCE_UPDATE = 1;
 const char UPDATE_ONLY_ON_CHANGE = 0;
-unsigned char lastKnownInputState = 255;
+unsigned char lastKnownInputState = LKIS;
 
 void PORT_Init()
 {
@@ -104,7 +129,7 @@ void PORT_Init()
 
 void UART_Init(uint32_t Baud)
 {
-	unsigned int BaudRate = OSCSPEED / (16 * Baud) - 1;		//calculate BaudRate from page 145
+	unsigned int BaudRate = OSCSPEED / (SIXT * Baud) - 1;		//calculate BaudRate from page 145
 
 	//set BaudRate into registers
 	UBRRH = (unsigned char) BaudRate>>8;
@@ -131,7 +156,7 @@ void UART_Transmit(unsigned char Data)
 /*************************************** W R I T E *****************************************/
 
 //return Length of string
-unsigned char Length(char Temp[80])
+unsigned char Length(char Temp[TXTMAX])
 {
 	unsigned char L=0;
 	while (Temp[L]) L++;
@@ -139,7 +164,7 @@ unsigned char Length(char Temp[80])
 }
 
 //print text
-void Print(char Text[80])
+void Print(char Text[TXTMAX])
 {
 	unsigned char Len, i, T;
 	Len = Length(Text);
@@ -152,7 +177,7 @@ void Print(char Text[80])
 }
 
 //print text and new line
-void PrintLn(char Text[80])
+void PrintLn(char Text[TXTMAX])
 {
 	unsigned char Len, i, T;
 	Len = Length(Text);
@@ -162,14 +187,14 @@ void PrintLn(char Text[80])
 		UART_Transmit(T);
 	}
 	strcpy(Text, "");
-	UART_Transmit(13);
+	UART_Transmit(THRT);
 	UART_Transmit(10);
 }
 
 //print new line
 void PrintLine()
 {
-	UART_Transmit(13);
+	UART_Transmit(THRT);
 	UART_Transmit(10);
 }
 
@@ -206,9 +231,9 @@ void PrintStatus(unsigned char T)
 
 	while(T>0)
 	{
-		hex[i]=T%16;
+		hex[i]=T%SIXT;
 		hex[i]=hexArray[hex[i]];
-		T=floor(T/16);
+		T=floor(T/SIXT);
 		i--;            
 	}
 		
@@ -225,10 +250,10 @@ void EvaluateStatus(unsigned char force)
 	//calculating the state value 
 
 	// input pins	
-	if (!(PINA & 0b00000100))	T = T + 128;
-	if (!(PINA & 0b00000010))	T = T + 64;
-	if (!(PINA & 0b00000001))	T = T + 32;
-	if (!(PIND & 0b00000100))	T = T + 16;
+	if (!(PINA & 0b00000100))	T = T + BIT128;
+	if (!(PINA & 0b00000010))	T = T + BIT64;
+	if (!(PINA & 0b00000001))	T = T + BIT32;
+	if (!(PIND & 0b00000100))	T = T + BIT16;
 
 	// output relays
 	if ((PINB & 0b00000001))	T = T + 8;
@@ -301,17 +326,17 @@ void TurnOnRelays()
 void ControlRelays()
 {
 	unsigned char T=0, T1, Br, Arr[5], Bl = 1;
-	for (Br=0; Br<5; Br++) Arr[Br] = 48; //null the elements of the array (Arr[Br] = '0')
+	for (Br=0; Br<5; Br++) Arr[Br] = FOUREI; //null the elements of the array (Arr[Br] = '0')
 	Br = 0;
 
-	while ((T != 10) & (T != 13) & (Br < 1) & Bl)
+	while ((T != DIX) & (T != THRT) & (Br < 1) & Bl)
 	{
 		T = UART_Receive();
-		if ((T != 0) & (T != 10) & (T != 13) & Bl)	
+		if ((T != 0) & (T != DIX) & (T != THRT) & Bl)	
 		{
 			Br++;
 			T1 = T;		//keeping value of T (T has dynamic value (ENTER))
-			if ((T1 < 48) | ((T1>57) & (T1<65)) | (T1 > 70)) //if T1(T) isn't 0-9 or A-F
+			if ((T1 < FOUREI) | ((T1>FIFSE) & (T1<SIXFIV)) | (T1 > SEVEN)) //if T1(T) isn't 0-9 or A-F
 				Bl = 0;
 		}
 	}
@@ -325,33 +350,33 @@ void ControlRelays()
 	else
 	{			
 		Br = 0;		//null Br
-		if (T < 58) 		//T [0..9] (0 - 48, 9 - 57)
-			T = T - 48;
+		if (T < FIFEI) 		//T [0..9] (0 - 48, 9 - 57)
+			T = T - FOUREI;
 		else				//T [10..15] (A - 65, F - 70)
-			T = T - 55;
+			T = T - FIFIF;
 
 		//transmit T in binary and keep its value in array
 		while (T)
 		{
-			Arr[Br] = T % 2 + 48;
+			Arr[Br] = T % 2 + FOUREI;
 			Br++;
 			T = T / 2;
 		}
 
 		//check value of each sign and output the relays
-		if (Arr[3] == 49) 
+		if (Arr[3] == FONI) 
 			PORTB = PORTB | 0b00000001;
 		else
 			PORTB = PORTB & 0b11111110;
-		if (Arr[2] == 49) 
+		if (Arr[2] == FONI) 
 			PORTB = PORTB | 0b00000010;
 		else
 			PORTB = PORTB & 0b11111101;
-		if (Arr[1] == 49) 
+		if (Arr[1] == FONI) 
 			PORTB = PORTB | 0b00000100;
 		else
 			PORTB = PORTB & 0b11111011;
-		if (Arr[0] == 49) 
+		if (Arr[0] == FONI) 
 			PORTB = PORTB | 0b00001000;
 		else
 			PORTB = PORTB & 0b11110111;
@@ -407,7 +432,7 @@ void AcceptCommands()
 int main()
 {
 	PORT_Init();
-	UART_Init(19200);
+	UART_Init(BIG);
 	while (1)
 	{
 		PrintWelcome();
